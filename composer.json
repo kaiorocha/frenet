@@ -5,6 +5,7 @@
     "keywords": ["frete", "shipping", "entrega", "frenet"],
     "homepage": "http://github.com/kaiorocha/frenet",
     "type": "library",
+    "license": "MIT",
     "authors": [
         {
             "name": "Kaio Rocha",
