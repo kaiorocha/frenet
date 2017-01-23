@@ -1,0 +1,12 @@
+{
+    "name": "kaiorocha/frenet",
+    "description": "Integcao com a FreNet",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Kaio Rocha",
+            "email": "kaio.f.roch@gmail.com"
+        }
+    ],
+    "require": {}
+}
