@@ -12,8 +12,8 @@ class Shipping {
         $api = Frenet::init([
             'service' => 'logistics',
             'method' => 'ShippingQuoteWS',
-            'Username' => 'danilo_key',
-            'Password' => 'KuHN5KVvCJwH3tipEyXgOw==',
+            'Username' => '',
+            'Password' => '',
             'SellerCEP' => '04542051',
         ]);
 
