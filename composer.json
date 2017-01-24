@@ -1,0 +1,21 @@
+{
+    "name": "kaiorocha/frenet",
+    "description": "Pacote de integracao com a Frenet para cotacao de fretes",
+    "type": "library",
+    "require": {
+        "php": ">=5.3"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kaio Rocha",
+            "email": "kaio.f.roch@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Frenet\\": "src/"
+        }
+    }
+}
