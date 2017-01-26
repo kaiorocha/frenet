@@ -7,22 +7,20 @@ Via composer
 ### Exemplo de utilização
 
 ```php
-//Configure as informações do cadastro em Shipping.php
-$api = Frenet::init([
+//Configure as informações do cadastro
+$config = Frenet::init([
             'service' => 'logistics',
             'method' => 'ShippingQuoteWS',
             'Username' => '',
             'Password' => '',
             'SellerCEP' => '04542051',
         ]);
-```
-
-```php
+        
 //Instancia o serviço Shipping
 $test = new \Shipping\Shipping();
 
-//Chama o método getShippingQuote passando Itens(Array), CEP(String) e TOTAL(Float) do carrinho
-print_r($test::getShippingQuote([
+//Chama o método getShippingQuote passando as configurações definidas como primeiro parametro e um array contendo, Itens(Array), CEP(String) e TOTAL(Float) do carrinho como segundo parâmetro.
+print_r($test::getShippingQuote($config, [
     'itens' => [
         [
             'weight' => 1,
