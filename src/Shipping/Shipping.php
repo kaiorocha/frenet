@@ -1,6 +1,6 @@
 <?php
 
-namespace Shipping;
+namespace Frenet\Shipping;
 
 use RestClient;
 
