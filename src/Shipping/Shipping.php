@@ -3,19 +3,11 @@
 namespace Shipping;
 
 use RestClient;
-use Frenet\Frenet;
 
 class Shipping {
 
-    public static function getShippingQuote($data)
+    public static function getShippingQuote($api, $data)
     {
-        $api = Frenet::init([
-            'service' => 'logistics',
-            'method' => 'ShippingQuoteWS',
-            'Username' => '',
-            'Password' => '',
-            'SellerCEP' => '04542051',
-        ]);
 
         $validate = self::validate($data);
         if(!$validate['status']){
@@ -59,13 +51,13 @@ class Shipping {
 
     private static function validate($data)
     {
-        if(!isset($data['cep'])){
+        if(!isset($data['cep'])|| empty($data['cep'])){
             return [
                 'status' => false,
                 'erro' => 'Parâmetro(cep) obrigatório'
             ];
         }
-        if(!isset($data['total'])){
+        if(!isset($data['total'])|| empty($data['total'])){
             return [
                 'status' => false,
                 'erro' => 'Parâmetro(total) obrigatório'

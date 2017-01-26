@@ -3,9 +3,17 @@
 require ('../vendor/autoload.php');
 require ('../src/Shipping/Shipping.php');
 
+$config = \Frenet\Frenet::init([
+    'service' => 'logistics',
+    'method' => 'ShippingQuoteWS',
+    'Username' => '',
+    'Password' => '',
+    'SellerCEP' => '04542051',
+]);
+
 $test = new \Shipping\Shipping();
 
-print_r($test::getShippingQuote([
+print_r($test::getShippingQuote($config, [
     'itens' => [
         [
             'weight' => 1,
