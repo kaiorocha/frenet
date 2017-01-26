@@ -12,7 +12,6 @@
             "email": "kaio.f.roch@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
             "Frenet\\": "src/"
